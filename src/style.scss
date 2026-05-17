@@ -41,6 +41,7 @@ input {
     appearance: none;
     outline: none;
     min-width: 0;
+    padding: 0;
     color: var(--color-neutral-green-900);
 
     &:-internal-autofill-selected {
@@ -86,6 +87,11 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media (min-width: 1440px) {
+        padding-top: rem(112);
+        justify-content: flex-start;
+    }
 }
 
 .app-title {
@@ -98,6 +104,10 @@ button {
     margin-bottom: rem(40);
     width: rem(110);
     margin: 0 auto rem(32);
+
+    @media (min-width: 1440px) {
+        margin: 0 auto rem(79);
+    }
 }
 
 .card {
@@ -108,6 +118,25 @@ button {
     display: flex;
     flex-direction: column;
     gap: rem(32);
+
+    @media (min-width: 1440px) {
+        max-width: rem(920);
+        margin: 0 auto;
+        flex-grow: 0;
+        flex-direction: row;
+        border-radius: rem(32);
+        padding: rem(32);
+        gap: rem(30);
+    }
+}
+
+@media (min-width: 1440px) {
+    .form,
+    .total {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: rem(413);
+    }
 }
 
 .form {
@@ -116,6 +145,11 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (min-width: 1440px) {
+        padding: rem(14) rem(16) rem(16);
+        min-height: rem(417);
+    }
 }
 
 .input {
@@ -136,6 +170,8 @@ button {
 
     &__error {
         color: red;
+        opacity: 0;
+        transition: opacity 0.233s ease-out;
     }
 
     &__icon {
@@ -149,9 +185,13 @@ button {
         background-color: var(--color-neutral-grey-50);
         border-radius: rem(4);
         padding: 0 rem(16);
+        transition: box-shadow 0.233s ease-out;
 
         &:has(input:focus-visible) {
             box-shadow: 0 0 0 2px inset var(--color-primary-green-400);
+        }
+        &:has(input:user-invalid) {
+            box-shadow: 0 0 0 2px inset red;
         }
     }
 
@@ -163,6 +203,12 @@ button {
 
         &::placeholder {
             color: var(--color-neutral-grey-400);
+        }
+    }
+
+    &:has(input:user-invalid) {
+        .input__error {
+            opacity: 1;
         }
     }
 }
@@ -181,6 +227,10 @@ button {
         display: flex;
         flex-wrap: wrap;
         gap: rem(16);
+
+        @media (min-width: 1440px) {
+            gap: rem(14) rem(16);
+        }
     }
 
     &__button {
@@ -210,6 +260,10 @@ button {
             background-color: var(--color-primary-green-400);
             color: var(--color-neutral-green-900);
         }
+
+        @media (min-width: 1440px) {
+            min-width: rem(116);
+        }
     }
 
     &__input {
@@ -226,7 +280,7 @@ button {
         border-radius: rem(4);
         min-height: rem(48);
         cursor: pointer;
-        padding: 0 rem(16);
+        padding: 0 rem(16) 0 0;
 
         &:has(input:focus-visible) {
             outline: 2px solid var(--color-primary-green-400);
@@ -244,9 +298,9 @@ button {
         }
     }
 
-    &__hidden {
-        display: none;
-    }
+    // &__hidden {
+    //     display: none;
+    // }
 }
 
 .total {
@@ -264,6 +318,14 @@ button {
 
     &__button {
         margin-top: rem(34);
+
+        @media (min-width: 1440px) {
+            margin-top: auto;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        padding: rem(40);
     }
 }
 
@@ -272,14 +334,25 @@ button {
     grid-template-columns: 1fr auto;
     grid-template-rows: 1fr auto;
     color: var(--color-neutral-white);
+    align-items: center;
 
     &__label {
         font-size: rem(16);
+        line-height: rem(26);
+
+        @media (min-width: 1440px) {
+            align-self: flex-end;
+        }
     }
 
     &__subtitle {
         font-size: rem(13);
+        line-height: rem(18);
         color: var(--color-neutral-grey-400);
+
+        @media (min-width: 1440px) {
+            align-self: flex-start;
+        }
     }
 
     &__value {
@@ -288,6 +361,17 @@ button {
         text-align: right;
         align-content: center;
         color: var(--color-primary-green-400);
+
+        @media (min-width: 1440px) {
+            font-size: rem(46);
+            line-height: rem(64);
+        }
+    }
+
+    @media (min-width: 1440px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        min-height: rem(72);
     }
 }
 

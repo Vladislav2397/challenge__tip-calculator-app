@@ -28,6 +28,34 @@ function handleFormChanges() {
             tip: formData.get('tip'),
         }
 
+        if (newData.bill && newData.people && newData.tip) {
+            formEl.requestSubmit()
+        }
+    })
+
+    formEl.addEventListener('reset', () => {
+        const tipAmountPerPersonEl = document.querySelector(
+            '#tip-amount-per-person',
+        )
+        const totalAmountPerPersonEl = document.querySelector(
+            '#total-amount-per-person',
+        )
+
+        tipAmountPerPersonEl.textContent = `$0.00`
+        totalAmountPerPersonEl.textContent = `$0.00`
+    })
+
+    formEl.addEventListener('submit', event => {
+        event.preventDefault()
+
+        const formData = new FormData(formEl)
+
+        const newData = {
+            bill: formData.get('bill'),
+            people: formData.get('people'),
+            tip: formData.get('tip'),
+        }
+
         const normalizedData = {
             bill: +newData.bill || 0,
             people: +newData.people || 0,
@@ -51,18 +79,6 @@ function handleFormChanges() {
             tipAmountPerPersonEl.textContent = `$0.00`
             totalAmountPerPersonEl.textContent = `$0.00`
         }
-    })
-
-    formEl.addEventListener('reset', () => {
-        const tipAmountPerPersonEl = document.querySelector(
-            '#tip-amount-per-person',
-        )
-        const totalAmountPerPersonEl = document.querySelector(
-            '#total-amount-per-person',
-        )
-
-        tipAmountPerPersonEl.textContent = `$0.00`
-        totalAmountPerPersonEl.textContent = `$0.00`
     })
 }
 
