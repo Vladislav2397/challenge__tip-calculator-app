@@ -176,6 +176,7 @@ button {
     }
 
     &__error {
+        text-align: right;
         color: red;
         opacity: 0;
         transition: opacity 0.233s ease-out;
