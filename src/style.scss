@@ -1,3 +1,5 @@
+$desktop-breakpoint: 980px;
+
 :root {
     --color-primary-green-400: hsl(172, 67%, 45%);
     --color-primary-green-200: hsl(172, 67%, 75%);
@@ -88,7 +90,7 @@ button {
     flex-direction: column;
     justify-content: center;
 
-    @media (min-width: 1440px) {
+    @media (min-width: $desktop-breakpoint) {
         padding-top: rem(112);
         justify-content: flex-start;
     }
@@ -105,7 +107,7 @@ button {
     width: rem(110);
     margin: 0 auto rem(32);
 
-    @media (min-width: 1440px) {
+    @media (min-width: $desktop-breakpoint) {
         margin: 0 auto rem(79);
     }
 }
@@ -118,10 +120,11 @@ button {
     display: flex;
     flex-direction: column;
     gap: rem(32);
+    max-width: rem(600);
+    margin: 0 auto;
 
-    @media (min-width: 1440px) {
+    @media (min-width: $desktop-breakpoint) {
         max-width: rem(920);
-        margin: 0 auto;
         flex-grow: 0;
         flex-direction: row;
         border-radius: rem(32);
@@ -130,7 +133,7 @@ button {
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-breakpoint) {
     .form,
     .total {
         flex-grow: 1;
@@ -146,7 +149,7 @@ button {
     flex-direction: column;
     justify-content: space-between;
 
-    @media (min-width: 1440px) {
+    @media (min-width: $desktop-breakpoint) {
         padding: rem(14) rem(16) rem(16);
         min-height: rem(417);
     }
@@ -228,7 +231,7 @@ button {
         flex-wrap: wrap;
         gap: rem(16);
 
-        @media (min-width: 1440px) {
+        @media (min-width: $desktop-breakpoint) {
             gap: rem(14) rem(16);
         }
     }
@@ -261,7 +264,7 @@ button {
             color: var(--color-neutral-green-900);
         }
 
-        @media (min-width: 1440px) {
+        @media (min-width: $desktop-breakpoint) {
             min-width: rem(116);
         }
     }
@@ -319,12 +322,12 @@ button {
     &__button {
         margin-top: rem(34);
 
-        @media (min-width: 1440px) {
+        @media (min-width: $desktop-breakpoint) {
             margin-top: auto;
         }
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: $desktop-breakpoint) {
         padding: rem(40);
     }
 }
@@ -340,7 +343,7 @@ button {
         font-size: rem(16);
         line-height: rem(26);
 
-        @media (min-width: 1440px) {
+        @media (min-width: $desktop-breakpoint) {
             align-self: flex-end;
         }
     }
@@ -350,7 +353,7 @@ button {
         line-height: rem(18);
         color: var(--color-neutral-grey-400);
 
-        @media (min-width: 1440px) {
+        @media (min-width: $desktop-breakpoint) {
             align-self: flex-start;
         }
     }
@@ -362,13 +365,13 @@ button {
         align-content: center;
         color: var(--color-primary-green-400);
 
-        @media (min-width: 1440px) {
+        @media (min-width: $desktop-breakpoint) {
             font-size: rem(46);
             line-height: rem(64);
         }
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: $desktop-breakpoint) {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         min-height: rem(72);
