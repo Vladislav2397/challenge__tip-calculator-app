@@ -41,6 +41,9 @@ function handleFormChanges() {
             '#total-amount-per-person',
         )
 
+        if (!(tipAmountPerPersonEl instanceof HTMLElement)) return
+        if (!(totalAmountPerPersonEl instanceof HTMLElement)) return
+
         tipAmountPerPersonEl.textContent = `$0.00`
         totalAmountPerPersonEl.textContent = `$0.00`
     })
@@ -57,9 +60,9 @@ function handleFormChanges() {
         }
 
         const normalizedData = {
-            bill: +newData.bill || 0,
-            people: +newData.people || 0,
-            tip: +newData.tip || 0,
+            bill: normalizeNumber(newData.bill),
+            people: normalizeNumber(newData.people),
+            tip: normalizeNumber(newData.tip),
         }
 
         const tipAmountPerPersonEl = document.querySelector(
@@ -69,10 +72,10 @@ function handleFormChanges() {
             '#total-amount-per-person',
         )
 
-        if (isDataValid(normalizedData)) {
-            if (!(tipAmountPerPersonEl instanceof HTMLElement)) return
-            if (!(totalAmountPerPersonEl instanceof HTMLElement)) return
+        if (!(tipAmountPerPersonEl instanceof HTMLElement)) return
+        if (!(totalAmountPerPersonEl instanceof HTMLElement)) return
 
+        if (isDataValid(normalizedData)) {
             tipAmountPerPersonEl.textContent = `$${computeTipAmountPerPerson(normalizedData).toFixed(2)}`
             totalAmountPerPersonEl.textContent = `$${computeTotalAmountPerPerson(normalizedData).toFixed(2)}`
         } else {
@@ -145,4 +148,10 @@ function isDataValid(data: Data) {
     if (Number.isNaN(data.tip)) return false
 
     return data.bill > 0 && data.people > 0 && data.tip >= 0
+}
+
+function normalizeNumber(value: any) {
+    if (Number.isNaN(value)) return 0
+
+    return Number(value) || 0
 }
