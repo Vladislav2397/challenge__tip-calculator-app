@@ -22,15 +22,15 @@ Your users should be able to:
 - See hover states for all interactive elements on the page
 - Calculate the correct tip and total cost of the bill per person
 
-### Want some support on the challenge? 
+### Want some support on the challenge?
 
 [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
 
 ## Where to find everything
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
 
 If you would like the Figma design file to gain experience using professional tools and build more accurate projects faster, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
 
@@ -47,7 +47,7 @@ We've included two files to help you if you're using AI coding assistants (like 
 
 **How to use them:** You don't need to do anything! These files are automatically detected by most AI coding tools. The AI will read them and adjust its behavior to be a better learning partner—guiding you toward solutions rather than just giving you the answers.
 
-**Note:** These files are designed to help you *learn*, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
+**Note:** These files are designed to help you _learn_, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
 
 ## Building your project
 
@@ -88,12 +88,12 @@ Remember, if you're looking for feedback on your solution, be sure to ask questi
 
 There are multiple places you can share your solution:
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
+1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community).
 2. Share on [X (formerly Twitter)](https://x.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in your post. We'd love to take a look at what you've built and help share it around.
 3. Share your solution on [LinkedIn](https://www.linkedin.com/company/frontend-mentor/).
 4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
 
 The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
 
