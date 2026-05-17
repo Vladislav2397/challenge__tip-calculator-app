@@ -124,6 +124,8 @@ button {
     gap: rem(32);
     max-width: rem(600);
     margin: 0 auto;
+    width: 100%;
+    min-width: 320px;
 
     @media (min-width: $desktop-breakpoint) {
         max-width: rem(920);
